@@ -1,4 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
+import { ProductProviderType } from "../http/providers/product.provider-type";
 
 export class ProductDto {
 
@@ -25,4 +26,7 @@ export class ProductDto {
   
   @ApiProperty({ example: true })
   hasDiscount?: boolean;
+
+  @ApiProperty({ example: "brazilian" })
+  origin: ProductProviderType;
 }
