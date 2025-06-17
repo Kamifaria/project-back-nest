@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
 import { ConfigService } from '@nestjs/config';
 import { EuProductDto } from '../../dto/eu-product.dto';
-import { UnifiedProductDto } from '../../dto/unified-product.dto';
+import { ProductDto } from '../../dto/product.dto';
 import { firstValueFrom } from 'rxjs';
 import { ProductProviderInterface } from './product.provider.interface';
 
@@ -13,7 +13,7 @@ export class EuProductProvider implements ProductProviderInterface {
     private readonly config: ConfigService,
   ) {}
 
-  async getProducts(): Promise<UnifiedProductDto[]> {
+  async getProducts(): Promise<ProductDto[]> {
     const url = this.config.get('PRODUCTS_ENDPOINT');
     const response = await firstValueFrom(this.http.get<EuProductDto[]>(`${url}/european_provider`));
     return response.data.map((item) => ({

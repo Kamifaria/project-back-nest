@@ -107,3 +107,9 @@ npm run test:cov
 | **Factory/Strategy Pattern**      | Aplicado para separação de provedores externos com lógica reutilizável   |
 | **Scripts de CLI Automatizados**  | Scripts para build, testes, lint e migrations no `package.json`          |
 | **Padrão RESTful**                | Estruturação dos endpoints seguindo os princípios REST                   |
+
+## 📄 Documentação da API
+
+A documentação da API está disponível em [http://localhost:3000/api/docs](http://localhost:3000/api/docs). Abaixo um link do Swagger:
+
+![Link Swagger](docs/swagger-example.png)

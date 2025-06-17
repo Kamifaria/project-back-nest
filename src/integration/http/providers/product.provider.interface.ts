@@ -1,5 +1,5 @@
-import { UnifiedProductDto } from '../../dto/unified-product.dto';
+import { ProductDto } from '../../dto/product.dto';
 
 export interface ProductProviderInterface {
-  getProducts(): Promise<UnifiedProductDto[]>;
+  getProducts(): Promise<ProductDto[]>;
 }
